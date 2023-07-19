@@ -31,15 +31,22 @@ Now that we have Terraform installed on our CloudShell let's upload the <b>main.
 
 <img width="1449" alt="2" src="https://github.com/niazkhan0731/AWS-Projects/assets/135728087/2fcba2cb-0cd8-4524-9bed-3e8def0202e8">
 
-## Step 4:Executing the main.tf file using Terraform
+## Step 4: Executing the main.tf file using Terraform
 
 The first command we will execute on the CloudShell is <b>terraform init</b>. This command will download the provider files needed to connect Terraform to AWS.
 
 The second command we will execute on the CloudShell is <b>terraform plan</b>. This command will provide you a brakdown of what Terraform will be doing during the provisioning process.
 
-The last command we will execute  on the CloudShell is <b>terraform apply<b>. This command will tell Terraform to run the plan.
+The last command we will execute  on the CloudShell is <b>terraform apply</b>. This command will tell Terraform to run the plan.
 
-And there you can see below if we go back to our <b>AWS Management Console</b> you can see Terraform has provisioned an S3 bucket for us automatically! This method is super useful if you are tasked to provision multiple S3 buckets at once, you can use Terraform to automate the process.
+And there you can see below if we go back to our <b>AWS Management Console</b> you can see Terraform has provisioned an S3 bucket called <b><i>tcb-app-qa-nk731</b></i> for us automatically! This method is super useful if you are tasked to provision multiple S3 buckets at once, you can use Terraform to automate the process in minutes and save time for your organization.
+
+<img width="1453" alt="3" src="https://github.com/niazkhan0731/AWS-Projects/assets/135728087/8d83e904-a2cd-48d1-b727-097eb3c9c8c7">
+
+## Step 5: Removing the S3 Bucket using Terraform
+So now because I created this bucket as a demo for the project I can simply remove it by going back to my CloudShell and executing the command <b>terraform destroy</b> and it will quickly remove the S3 bucket that was provisioned!
+
+I learned a lot from this project and look forward going into more complex projects in the future as my knowledge increases.
 
 
 
