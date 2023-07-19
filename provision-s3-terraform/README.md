@@ -21,15 +21,25 @@ The benefits of using Terraform for Infrastructure as Code are manifold. They in
 ## Step 1: Create the terraform configuration file
 I first went to https://registry.terraform.io/providers/hashicorp/aws/latest/docs to first grab the configuration code. This website is a ideal place to visit for all terraform configuration needs. Then I created a file called <b>main.tf</b> on <a href="https://code.visualstudio.com/"> Visual Studio Code</a>. You can also use any other code editor you are familiar with to create this file. This created a executable file that we will use later to create the S3 bucket using Terraform. You can see the script file on my repository and copy it if you are following along. 
 
-## Step 2: Installing Terraform on AWS Cloudshell
-You have a few options when it comes to running Terraform. You can download Terraform to your computer and connect it to your AWS account. However, for this project I installed Terraform on AWS Cloudshell. To accomplish this first I went to https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli. Then went to the <b>Linux</b> tab then clicked on <b>Amazon Linux</b> tab and followed the steps shown here:
+## Step 2: Installing Terraform on AWS CloudShell
+You have a few options when it comes to running Terraform. You can download Terraform to your computer and connect it to your AWS account. However, for this project I installed Terraform on AWS CloudShell. To accomplish this first I went to https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli. Then went to the <b>Linux</b> tab then clicked on <b>Amazon Linux</b> tab and followed the steps shown here:
 
 <p align="center"><img width="694" alt="1" src="https://github.com/niazkhan0731/AWS-Projects/assets/135728087/b9b713b5-1f52-4318-bc69-b6fcdaaf9b3f"></p>
 
-## Step 3: Upload the main.tf file you created to AWS Cloudshell
-Now that we have Terraform installed on our Cloudshell let's upload the <b>main.tf</b> file into our Cloudshell:
+## Step 3: Upload the main.tf file you created to AWS CloudShell
+Now that we have Terraform installed on our CloudShell let's upload the <b>main.tf</b> file into our CloudShell:
 
 <img width="1449" alt="2" src="https://github.com/niazkhan0731/AWS-Projects/assets/135728087/2fcba2cb-0cd8-4524-9bed-3e8def0202e8">
+
+## Step 4:Executing the main.tf file using Terraform
+
+The first command we will execute on the CloudShell is <b>terraform init</b>. This command will download the provider files needed to connect Terraform to AWS.
+
+The second command we will execute on the CloudShell is <b>terraform plan</b>. This command will provide you a brakdown of what Terraform will be doing during the provisioning process.
+
+The last command we will execute  on the CloudShell is <b>terraform apply<b>. This command will tell Terraform to run the plan.
+
+And there you can see below if we go back to our <b>AWS Management Console</b> you can see Terraform has provisioned an S3 bucket for us automatically! This method is super useful if you are tasked to provision multiple S3 buckets at once, you can use Terraform to automate the process.
 
 
 
